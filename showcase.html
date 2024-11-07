@@ -7,6 +7,7 @@
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="./src/style.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./favicon_io/favicon.ico">
     <style>
         @keyframes marquee {
             0% {
@@ -27,10 +28,10 @@
 <body>
     <div class="flex flex-col w-full">
         <!-- Navbar -->
-        <div class="flex min-w-full h-20 px-4 sm:px-16 bg-slate-950">
+        <div class="fixed z-50 flex min-w-full h-20 px-4 sm:px-16 bg-slate-950">
             <div class="w-full flex items-center justify-between relative sm:static">
                 <a href="">
-                    <img src="./img/logo-saestu-04-1.png" class="w-32" alt="">
+                    <img src="./img/logo-saestu-04-1.png" class="w-24 sm:w-32" alt="">
                 </a>
                 <input type="checkbox" id="menu-toggle" class="hidden peer" />
                 <div class="sm:flex w-full sm:w-fit rounded-lg flex-col sm:flex-row items-center text-white gap-4 sm:gap-8 absolute right-0 top-20 bg-slate-900 sm:bg-transparent sm:static px-8 py-2 sm:p-0 hidden peer-checked:flex">
@@ -75,7 +76,7 @@
         <!-- Navbar -->
 
         <!-- Content -->
-        <div class="felx w-full px-4 sm:px-16 bg-slate-950 pb-10">
+        <div class="felx w-full mt-20 px-4 sm:px-16 bg-slate-950 pb-10" data-aos="fade-up">
 
             <div class="flex items-center space-x-2 w-full justify-between text-sm sm:text-lg" data-aos="fade-up">
                 <a href="./project.html" class="text-white flex items-center">
@@ -133,7 +134,7 @@
             </div>
             <h1 class="font-bold text-center p-4 sm:text-[44px] ">Star : Flag Off</h1>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4" data-aos="fade-up">
                 <div class="grid gap-4">
                     <div>
                         <img class="h-auto max-w-full rounded-lg" src="./img/DSC02255.png" alt="">
@@ -207,20 +208,114 @@
 
     </div>
 
-    <div class="flex flex-col min-w-full px-4 sm:px-16 bg-slate-950"></div>
-    <div style="background-image: url(img/anbwh.gif);"
-        class="flex flex-col w-full h-[300px] sm:h-[600px] bg-no-repeat bg-cover p-8 justify-center items-center" data-aos="fade-up">
-        <p class="text-[24px] sm:text-[44px] text-white mt-2 sm:mt-8 text-center font-bold">We take care of your
-            business<br> with passion and effort</p>
+    <div style="background-image: url(img/anbwh.gif);" class="flex flex-col w-full h-[300px] sm:h-[600px] bg-no-repeat bg-cover p-8 justify-center items-center" data-aos="fade-up">
+        <p class="text-[24px] sm:text-[44px] text-white mt-2 sm:mt-8 text-center font-bold">Join us in bringing your brand's story to life with precision and passion.</p>
         <a href="#" class="inline-block w-fit text-[12px] sm:text-lg text-black text-center bg-white border px-2 py-1">
             <p class="flex items-center gap-1">
-                Let's Talk
+                Contact Us 
                 <span class="iconify text-xl text-black" data-icon="ic:round-arrow-outward"></span>
             </p>
         </a>
     </div>
 
     <!-- Content -->
+
+
+    <!-- Kolom Kanan: Formulir -->
+    <div class="col-md-6 d-flex justify-content-center align-items-center">
+        <form action="/submit-form" method="POST" class="w-100 max-w-lg p-4 text-white"
+            style="border-radius: 8px;">
+            <div class="row g-3">
+                <div class="col-12 col-md-6">
+                    <input type="text" id="nama" name="nama" placeholder="Nama"
+                        class="form-control bg-white text-black border-0" required>
+                </div>
+                <div class="col-12 col-md-6">
+                    <input type="tel" id="kontak-wa" name="kontak-wa" placeholder="Kontak WA"
+                        pattern="[0-9]{10,15}" class="form-control bg-white text-black border-0" required>
+                </div>
+                <div class="col-12 col-md-6">
+                    <input type="email" id="email" name="email" placeholder="Email"
+                        class="form-control bg-white text-black border-0" required>
+                </div>
+                <div class="col-12 col-md-6">
+                    <input type="text" id="perusahaan" name="perusahaan" placeholder="Perusahaan"
+                        class="form-control bg-white text-black border-0">
+                </div>
+                <!-- Form -->
+                <div class="col-12">
+                    <select id="kebutuhan-layanan" name="kebutuhan-layanan" class="form-select bg-white text-black border-0" required>
+                        <option value="">--Pilih Layanan--</option>
+                        <option value="Brand Development">Brand Development</option>
+                        <option value="Digital Marketing & Development">Digital Marketing & Development</option>
+                        <option value="Communication & Marketing Strategy">Communication & Marketing Strategy</option>
+                        <option value="MICE">MICE</option>
+                    </select>
+                </div>
+
+                <!-- Opsi tambahan untuk Creative Production -->
+                <div class="col-12" id="creative-options" style="display: none;">
+                    <select id="creative-options-select" name="creative-options" class="form-select bg-white text-black border-0">
+                        <option value="">--Pilih Opsi--</option>
+                        <option value="Video Production">3D Animation</option>
+                        <option value="Graphic Design">Motion Graphic</option>
+                        <option value="Branding">2D & 3D Design</option>
+                        <option value="Photograpy & Videography">Photograpy & Videography</option>
+                        <option value="Script & Storyboard">Script & Storyboard</option>
+                    </select>
+                </div>
+
+                <!-- Opsi tambahan untuk Digital Marketing & Development -->
+                <div class="col-12" id="digital-options" style="display: none;">
+                    <select id="digital-options-select" name="digital-options" class="form-select bg-white text-black border-0">
+                        <option value="">--Pilih Opsi--</option>
+                        <option value="SEO">Kol Management</option>
+                        <option value="PPC">Social Media Management</option>
+                        <option value="Digital Ads">Digital Ads</option>
+                        <option value="SEO & SEM">SEO & SEM</option>
+                        <option value="Web & System Development">Web & System Development</option>
+                    </select>
+                </div>
+
+                <!-- Opsi tambahan untuk Communication & Marketing Strategy -->
+                <div class="col-12" id="marketing-options" style="display: none;">
+                    <select id="marketing-options-select" name="marketing-options" class="form-select bg-white text-black border-0">
+                        <option value="">--Pilih Opsi--</option>
+                        <option value="Brand Strategy">Strategic Campaign</option>
+                        <option value="Market Research">Brand Activation</option>
+                        <option value="PR Campaigns">Live Streaming</option>
+                        <option value="Online/Offline/Hybrid Event">Online/Offline/Hybrid Event</option>
+                        <option value="Advertising">Advertising</option>
+                        <option value="Strategic Copywriting">Strategic Copywriting</option>
+                    </select>
+                </div>
+
+                <div class="col-12" id="mice-options" style="display: none;">
+                    <select id="mice-options-select" name="mice-options" class="form-select bg-white text-black border-0">
+                        <option value="">--Pilih Opsi--</option>
+                        <option value="Brand Strategy">Strategic Campaign</option>
+                        <option value="Market Research">Brand Activation</option>
+                        <option value="PR Campaigns">Live Streaming</option>
+                        <option value="Online/Offline/Hybrid Event">Online/Offline/Hybrid Event</option>
+                        <option value="Advertising">Advertising</option>
+                        <option value="Strategic Copywriting">Strategic Copywriting</option>
+                    </select>
+                </div>
+
+                <div class="col-12">
+                    <textarea id="note" name="note" rows="4" placeholder="Tambahkan catatan jika diperlukan"
+                        class="form-control bg-white text-black border-0"></textarea>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn w-100"
+                        style="background-color: #253ea7;color: #FFFFFF;">Kirim</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
 
     <!-- Footer -->
     <div class="flex flex-col sm:flex-row sm:flex-wrap gap-y-4 min-w-full p-4 sm:px-16 bg-neutral-200" data-aos="fade-up">
