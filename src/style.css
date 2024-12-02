@@ -1209,10 +1209,6 @@ input:checked + .toggle-bg {
   grid-column: span 1 / span 1;
 }
 
-.m-10 {
-  margin: 2.5rem;
-}
-
 .m-4 {
   margin: 1rem;
 }
@@ -1603,10 +1599,6 @@ input:checked + .toggle-bg {
   justify-content: space-evenly;
 }
 
-.justify-items-end {
-  justify-items: end;
-}
-
 .gap-0\.5 {
   gap: 0.125rem;
 }
@@ -1903,8 +1895,16 @@ input:checked + .toggle-bg {
   padding-bottom: 2.5rem;
 }
 
+.pb-12 {
+  padding-bottom: 3rem;
+}
+
 .pb-20 {
   padding-bottom: 5rem;
+}
+
+.pl-4 {
+  padding-left: 1rem;
 }
 
 .pt-2 {
@@ -1913,10 +1913,6 @@ input:checked + .toggle-bg {
 
 .pt-4 {
   padding-top: 1rem;
-}
-
-.pl-4 {
-  padding-left: 1rem;
 }
 
 .text-center {
@@ -2077,6 +2073,15 @@ input:checked + .toggle-bg {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-transparent {
+  color: transparent;
+}
+
+.text-slate-950 {
+  --tw-text-opacity: 1;
+  color: rgb(2 6 23 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -2353,10 +2358,6 @@ input:checked + .toggle-bg {
     position: relative;
   }
 
-  .sm\:m-40 {
-    margin: 10rem;
-  }
-
   .sm\:my-16 {
     margin-top: 4rem;
     margin-bottom: 4rem;
@@ -2364,10 +2365,6 @@ input:checked + .toggle-bg {
 
   .sm\:mb-24 {
     margin-bottom: 6rem;
-  }
-
-  .sm\:ml-20 {
-    margin-left: 5rem;
   }
 
   .sm\:mt-10 {
@@ -2471,10 +2468,6 @@ input:checked + .toggle-bg {
     flex-wrap: wrap;
   }
 
-  .sm\:justify-start {
-    justify-content: flex-start;
-  }
-
   .sm\:gap-12 {
     gap: 3rem;
   }
@@ -2518,6 +2511,10 @@ input:checked + .toggle-bg {
     padding-right: 13rem;
   }
 
+  .sm\:pb-16 {
+    padding-bottom: 4rem;
+  }
+
   .sm\:pb-20 {
     padding-bottom: 5rem;
   }
@@ -2530,16 +2527,8 @@ input:checked + .toggle-bg {
     padding-top: 5rem;
   }
 
-  .sm\:pl-4 {
-    padding-left: 1rem;
-  }
-
   .sm\:text-left {
     text-align: left;
-  }
-
-  .sm\:text-center {
-    text-align: center;
   }
 
   .sm\:text-start {
@@ -2632,15 +2621,11 @@ input:checked + .toggle-bg {
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-
-  .md\:flex-row {
-    flex-direction: row;
-  }
 }
 
 @media (min-width: 1024px) {
-  .lg\:m-20 {
-    margin: 5rem;
+  .lg\:m-12 {
+    margin: 3rem;
   }
 
   .lg\:mb-20 {

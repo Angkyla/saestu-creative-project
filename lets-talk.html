@@ -104,7 +104,8 @@
                 <p class="text-white sm:text-[44px] font-bold text-3xl py-4">Let's Talk</p>
             </div>
             <div class="w-full sm:w-1/2 flex flex-col justify-center">
-                <p class="text-white text-[32px] sm:text-[30px] font-bold text-center sm:text-left">Let’s achieve something great
+                <p class="text-white text-[32px] sm:text-[30px] font-bold text-center sm:text-left">Let’s achieve
+                    something great
                     together </p>
                 <div class="w-full flex  pt-4 sm:flex-col lg:flex-row  gap-10 pl-4  items-center ">
                     <div class="w-fit">
@@ -235,9 +236,9 @@
 
         <div class="flex w-full flex-auto" data-aos="fade-up">
             <img src="img/image bpk.png" alt="" class="responsive-img">
-        </div>        
+        </div>
 
-        <div style="background-image: url(img/anbwh.gif);"
+        <div style="background-image: url(img/form.jpg);"
             class="flex flex-col w-full h-[300px] sm:h-[600px] bg-no-repeat bg-cover p-8 justify-center items-center"
             data-aos="fade-up">
             <p class="text-[24px] sm:text-[44px] text-white mt-2 sm:mt-8 text-center font-bold">Join us in bringing your
@@ -283,13 +284,13 @@
                 <div class="flex flex-col w-full sm:flex-col-reverse">
                     <div class="flex w-full h-72 relative">
                         <iframe class="w-full h-full rounded-2xl"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24624.2148798074!2d110.36579736676647!3d-7.737198579259035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a593843261dbf%3A0x25a7c0d273a98038!2sSaestu%20Creative!5e0!3m2!1sen!2sid!4v1727747211708!5m2!1sen!2sid"
-                            ></iframe>
-                        
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24624.2148798074!2d110.36579736676647!3d-7.737198579259035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a593843261dbf%3A0x25a7c0d273a98038!2sSaestu%20Creative!5e0!3m2!1sen!2sid!4v1727747211708!5m2!1sen!2sid"></iframe>
+
                         <!-- Overlay clickable area -->
-                        <a href="https://maps.app.goo.gl/y7YvT3cHFY6E3yX76" target="_blank" class="absolute inset-0 w-full h-full"></a>
+                        <a href="https://maps.app.goo.gl/y7YvT3cHFY6E3yX76" target="_blank"
+                            class="absolute inset-0 w-full h-full"></a>
                     </div>
-                    
+
                     <div class="flex w-full flex-col">
                         <p class="text-[14px] font-medium mt-1">HO Jogja :</p>
                         <p class="text-[14px]">Jl. Lempongsari Raya No.144-89, Randuguang, Sariharjo, Ngaglik, Sleman,
@@ -367,6 +368,41 @@
         // Sembunyikan semua opsi tambahan pada saat halaman dimuat
         hideAllOptions();
     </script>
+
+
+
+    <script>
+        // Cek apakah berada di halaman contact
+        if (window.location.pathname.includes('/lets-talk')) {
+            document.querySelector('a[href="/#our-service"]').addEventListener('click', function (e) {
+                e.preventDefault();
+                // Tambahkan hash #our-service ke URL home
+                window.location.href = '/#our-service';
+            });
+        }
+
+        // Fungsi untuk scroll ke elemen dengan ID tertentu
+        function scrollToElement(elementId) {
+            const element = document.querySelector(elementId);
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // Saat halaman home selesai dimuat dan memiliki hash #our-service
+        if (window.location.pathname === '/' && window.location.hash === '#our-service') {
+            window.addEventListener('load', function () {
+                // Delay untuk memastikan halaman benar-benar siap sebelum scroll
+                setTimeout(function () {
+                    scrollToElement('#our-service');
+                }, 500); // Delay 500ms untuk efek lebih smooth
+            });
+        }
+    </script>
+
+
 
 </body>
 
